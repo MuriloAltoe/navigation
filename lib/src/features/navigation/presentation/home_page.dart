@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/src/features/navigation/presentation/second_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,20 +20,33 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const SecondPage(content: 'Content SeconPage'),
+                    ),
+                  );
+                },
                 child: const Text('Go to Second Page'),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/tabs');
+                },
                 child: const Text('Go to Tab Navigation Page'),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/bottom');
+                },
                 child: const Text('Go to Bottom Navigation Page'),
               ),
               ElevatedButton(
-                onPressed: () {},
-                child: const Text('Go to Drawer navigation Page'),
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/drawer');
+                },
+                child: const Text('Go to Drawer Navigation Page'),
               ),
               ElevatedButton(
                 onPressed: () {},
