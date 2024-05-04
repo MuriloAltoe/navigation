@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:navigation/src/features/navigation/presentation/second_page.dart';
 
@@ -20,13 +22,14 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
+                onPressed: () async {
+                  String response = await Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) =>
                           const SecondPage(content: 'Content SeconPage'),
                     ),
                   );
+                  log('Response: $response');
                 },
                 child: const Text('Go to Second Page'),
               ),

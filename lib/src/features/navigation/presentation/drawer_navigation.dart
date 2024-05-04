@@ -26,8 +26,19 @@ class DrawerNavigation extends StatelessWidget {
           ),
         ),
       ),
-      body: const Center(
-        child: Text('Drawer navigation'),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Drawer navigation'),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
+              child: const Text('Back to HomePage'),
+            ),
+          ],
+        ),
       ),
     );
   }

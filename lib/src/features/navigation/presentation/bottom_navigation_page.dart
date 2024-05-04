@@ -50,13 +50,13 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
         selectedIndex: _selectIndex,
         destinations: const [
           NavigationDestination(
-            icon: Icon(Icons.favorite_outlined),
-            selectedIcon: Icon(Icons.favorite),
-            label: 'Favs',
+            icon: Icon(Icons.feed_outlined),
+            selectedIcon: Icon(Icons.feed),
+            label: 'Feed',
           ),
           NavigationDestination(
             icon: Icon(Icons.settings_outlined),
-            selectedIcon: Icon(Icons.feed),
+            selectedIcon: Icon(Icons.settings),
             label: 'Settings',
           ),
           NavigationDestination(

@@ -19,7 +19,7 @@ class SecondPage extends StatelessWidget {
             Text('Content: $content'),
             FilledButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).pop('Here`s the response');
               },
               child: const Text('Back to Home Page'),
             )
